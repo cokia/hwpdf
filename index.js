@@ -7,6 +7,7 @@ const createLoader = () => {
 }
 
 let loader = createLoader()
+let loadedUrl = undefined
 
 const fileSelector = document.getElementById('selector')
 const workingon = document.getElementById('workingon')
@@ -23,6 +24,7 @@ fileSelector.addEventListener('change', () => {
     a.classList.add('button')
     a.appendChild(document.createTextNode('다운로드가 시작되지 않았으면 화면을 눌러주세요'))
     workingon.after(a)
+    fileSelector.remove()
     a.click()
   })
 })
