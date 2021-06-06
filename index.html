@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="./pdpd.webmanifest" />
+    <link rel="manifest" href="./hwpdf.webmanifest" />
     <link rel="stylesheet" href="./loader.css" />
     <style>
       body {
@@ -29,21 +29,18 @@
         border-radius: 12px;
         display: inline-block;
         color: #18a0fb;
-        /* color: white; */
         background-color: transparent;
         font-weight: 900;
         font-size: 16px;
         border: none;
       }
     </style>
-    <title>피데피데</title>
+    <title>한글피데</title>
   </head>
   <body>
-    <input type="file" alt="파일 열기" id="selector" accept=".hwp" />
-    <!-- <div id="container"> -->
+    <input type="file" alt="파일 열기" id="selector" accept=".hwp, .hwpx" />
     <p id="workingon"></p>
-    <button>클릭/드래그 해서 한글파일 열기</button>
-    <!-- </div> -->
+    <button>클릭/드래그 해서 한글(hwp, hwpx)파일 열기</button>
     <script src="./index.js" type="module"></script>
   </body>
 </html>
