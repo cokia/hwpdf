@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./loader.css" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        box-sizing: content-box;
+        margin: 0px;
+      }
+      input[type="file"] {
+        width: 100vw;
+        height: 100vh;
+        opacity: 0;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      }
+      button {
+        padding: 20px;
+        border-radius: 12px;
+        display: inline-block;
+        color: #18a0fb;
+        /* color: white; */
+        background-color: transparent;
+        font-weight: 900;
+        font-size: 16px;
+        border: none;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" alt="파일 열기" id="selector" accept=".hwp" />
+    <!-- <div id="container"> -->
+    <p id="workingon"></p>
+    <button>클릭/드래그 해서 한글파일 열기</button>
+    <!-- </div> -->
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>

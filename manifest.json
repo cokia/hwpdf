@@ -1,0 +1,23 @@
+{
+  "name": "피데피데",
+  "short_name": "피데피데",
+  "description": "한글파일을 PDF로 렌더링합니다",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "share_target": {
+    "action": "/",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "HWPFile",
+      "text": "HWP File",
+      "url": "files",
+      "files": [
+        {
+          "name": "hwpfile",
+          "accept": ["hwp"]
+        }
+      ]
+    }
+  }
+}
