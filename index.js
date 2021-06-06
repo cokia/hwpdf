@@ -37,7 +37,7 @@ async function renderHWP(file) {
   parseBody.append('openFile', file)
   parseBody.append('format', '')
   parseBody.append('args', '')
-  const parsedData = await (await fetch("https://cors.bridged.cc/https://viewer.whale.naver.com/webhwpctrl/open", {
+  const parsedData = await (await fetch("https://viewer.whale.naver.com/webhwpctrl/open", {
     method: 'POST',
     body: parseBody,
   })).json()
