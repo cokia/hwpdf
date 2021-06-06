@@ -10,14 +10,19 @@ let loader = createLoader()
 
 const fileSelector = document.getElementById('selector')
 const workingon = document.getElementById('workingon')
+const loadButton = document.getElementById('load')
 
 fileSelector.addEventListener('change', () => {
   fileSelector.after(loader)
+  loadButton.remove()
   renderHWP(fileSelector.files[0]).then(url => {
     loader.remove()
     const a = document.createElement('a')
     a.href = url
     a.target = '_blank'
+    a.classList.add('button')
+    a.appendChild(document.createTextNode('다운로드가 시작되지 않았으면 화면을 눌러주세요'))
+    workingon.after(a)
     a.click()
   })
 })
@@ -27,8 +32,6 @@ function uuidv4() {
     (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
   );
 }
-
-console.log('ㅇ?')
 
 async function renderHWP(file) {
   workingon.innerHTML = file.name + ' 파일을 해석하는중'

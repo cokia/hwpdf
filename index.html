@@ -24,7 +24,7 @@
         left: 0px;
         top: 0px;
       }
-      button {
+      .button {
         padding: 20px;
         border-radius: 12px;
         display: inline-block;
@@ -47,7 +47,9 @@
   <body>
     <input type="file" alt="파일 열기" id="selector" accept=".hwp, .hwpx" />
     <p id="workingon"></p>
-    <button>클릭/드래그 해서 한글(hwp, hwpx)파일 열기</button>
+    <div class="button" id="load">
+      클릭/드래그 해서 한글(hwp, hwpx)파일 열기
+    </div>
     <div id="developer">
       <p>네이버 웨일의 HWP 변환 서버를 사용합니다</p>
       <p>
